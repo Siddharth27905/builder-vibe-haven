@@ -13,28 +13,26 @@ export default function Deliver() {
   };
 
   return (
-    <div className="min-h-screen text-foreground">
-      <div className="relative">
-        <img
-          src="https://images.unsplash.com/photo-1549921296-3f0b62309c64?auto=format&fit=crop&w=2000&q=80"
-          className="absolute inset-0 h-80 w-full object-cover"
-          alt="Hypercar"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <header className="relative z-10 border-b border-white/10 bg-black/40 backdrop-blur-xl">
-          <div className="container flex items-center justify-between py-4">
-            <button
-              onClick={() => navigate(-1)}
-              className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/80 hover:bg-white/10"
-            >
-              ← Back
-            </button>
-            <a href="/" className="text-sm text-white/70 hover:text-white">Sidz Garage</a>
-          </div>
-        </header>
-      </div>
+    <div className="relative min-h-screen text-foreground">
+      <img
+        src="https://images.unsplash.com/photo-1549921296-3f0b62309c64?auto=format&fit=crop&w=2000&q=80"
+        className="absolute inset-0 h-full w-full object-cover"
+        alt="Hypercar"
+      />
+      <div className="absolute inset-0 bg-black/60" />
+      <header className="relative z-10 border-b border-white/10 bg-black/40 backdrop-blur-xl">
+        <div className="container flex items-center justify-between py-4">
+          <button
+            onClick={() => navigate(-1)}
+            className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/80 hover:bg-white/10"
+          >
+            ← Back
+          </button>
+          <a href="/" className="text-sm text-white/70 hover:text-white">Sidz Garage</a>
+        </div>
+      </header>
 
-      <main className="container relative z-10 -mt-16 pb-12">
+      <main className="container relative z-10 py-12">
         <div className="rounded-2xl border border-white/10 bg-[hsl(var(--background))]/90 p-6 backdrop-blur">
           <h1 className="text-2xl font-bold">Schedule Delivery</h1>
           <p className="mt-1 text-white/70">Share your details and we'll arrange a convenient delivery.</p>
