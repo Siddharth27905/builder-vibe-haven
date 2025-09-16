@@ -86,9 +86,7 @@ export default function Index() {
             <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-lg shadow-blue-500/20">
               <CarIcon className="h-5 w-5" />
             </span>
-            <span className="font-extrabold tracking-tight">
-              Sidz Garage
-            </span>
+            <span className="font-extrabold tracking-tight">Sidz Garage</span>
           </a>
 
           <nav className="hidden items-center gap-2 md:flex">
@@ -110,23 +108,35 @@ export default function Index() {
               onSubmit={(e) => {
                 e.preventDefault();
                 const form = e.currentTarget as HTMLFormElement;
-                const input = form.querySelector('input[name="q"]') as HTMLInputElement;
+                const input = form.querySelector(
+                  'input[name="q"]',
+                ) as HTMLInputElement;
                 const q = input.value.trim();
                 if (!q) return;
                 const s = q.toLowerCase();
                 const makeMatch = makes.find((m) => m.name.toLowerCase() === s);
                 if (makeMatch) {
-                  return navigate(`/make/${encodeURIComponent(s.replace(/\s+/g, "-"))}`);
+                  return navigate(
+                    `/make/${encodeURIComponent(s.replace(/\s+/g, "-"))}`,
+                  );
                 }
                 for (const m of makes) {
-                  const model = m.models.find((model) => model.toLowerCase() === s);
+                  const model = m.models.find(
+                    (model) => model.toLowerCase() === s,
+                  );
                   if (model) {
-                    return navigate(`/car/${encodeURIComponent(m.name.toLowerCase().replace(/\s+/g, "-"))}/${encodeURIComponent(model.toLowerCase().replace(/\s+/g, "-"))}`);
+                    return navigate(
+                      `/car/${encodeURIComponent(m.name.toLowerCase().replace(/\s+/g, "-"))}/${encodeURIComponent(model.toLowerCase().replace(/\s+/g, "-"))}`,
+                    );
                   }
                 }
-                const fc = featuredCars.find((c) => `${c.make} ${c.model}`.toLowerCase() === s);
+                const fc = featuredCars.find(
+                  (c) => `${c.make} ${c.model}`.toLowerCase() === s,
+                );
                 if (fc) {
-                  return navigate(`/car/${encodeURIComponent(fc.make.toLowerCase().replace(/\s+/g, "-"))}/${encodeURIComponent(fc.model.toLowerCase().replace(/\s+/g, "-"))}`);
+                  return navigate(
+                    `/car/${encodeURIComponent(fc.make.toLowerCase().replace(/\s+/g, "-"))}/${encodeURIComponent(fc.model.toLowerCase().replace(/\s+/g, "-"))}`,
+                  );
                 }
                 navigate("/make/" + encodeURIComponent(s.replace(/\s+/g, "-")));
               }}
@@ -229,7 +239,9 @@ export default function Index() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-semibold">{make.name}</h3>
-                  <p className="mt-1 text-sm text-white/60">{make.description}</p>
+                  <p className="mt-1 text-sm text-white/60">
+                    {make.description}
+                  </p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {make.models.map((m) => (
                       <button
@@ -285,22 +297,23 @@ export default function Index() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold">
-                    {car.make} {" "}
+                    {car.make}{" "}
                     <span className="text-white/80">{car.model}</span>
                   </h3>
 
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {(makes.find((m) => m.name === car.make)?.models || []).map((m) => (
-                      <button
-                        key={m}
-                        onClick={() => goToCar({ make: car.make, model: m })}
-                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 hover:bg-white/10"
-                      >
-                        {m}
-                      </button>
-                    ))}
+                    {(makes.find((m) => m.name === car.make)?.models || []).map(
+                      (m) => (
+                        <button
+                          key={m}
+                          onClick={() => goToCar({ make: car.make, model: m })}
+                          className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 hover:bg-white/10"
+                        >
+                          {m}
+                        </button>
+                      ),
+                    )}
                   </div>
-
 
                   <div className="mt-6">
                     <button
@@ -336,19 +349,19 @@ export default function Index() {
               icon={Users}
               title="Consult"
               desc="Talk to an expert for trade-ins, financing, and options."
-              onClick={() => navigate('/consult')}
+              onClick={() => navigate("/consult")}
             />
             <Step
               icon={Calendar}
               title="Drive"
               desc="Book a test drive at your convenience."
-              onClick={() => navigate('/drive')}
+              onClick={() => navigate("/drive")}
             />
             <Step
               icon={Star}
               title="Deliver"
               desc="White-glove delivery straight to your door."
-              onClick={() => navigate('/deliver')}
+              onClick={() => navigate("/deliver")}
             />
           </div>
         </div>
@@ -373,19 +386,19 @@ export default function Index() {
               icon={Zap}
               title="Performance Tuning"
               desc="ECU remaps, intake/exhaust, and track-ready setups."
-              onClick={() => navigate('/garage/performance')}
+              onClick={() => navigate("/garage/performance")}
             />
             <ServiceCard
               icon={Wrench}
               title="Maintenance"
               desc="Manufacturer-spec service with OEM/approved parts."
-              onClick={() => navigate('/garage/maintenance')}
+              onClick={() => navigate("/garage/maintenance")}
             />
             <ServiceCard
               icon={Activity}
               title="Detailing"
               desc="Paint correction, ceramic coating, and protection."
-              onClick={() => navigate('/garage/detailing')}
+              onClick={() => navigate("/garage/detailing")}
             />
           </div>
         </div>
@@ -400,7 +413,9 @@ export default function Index() {
         <div className="container">
           <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
             <div>
-              <h2 className="text-2xl font-bold md:text-3xl">About Sidz Garage</h2>
+              <h2 className="text-2xl font-bold md:text-3xl">
+                About Sidz Garage
+              </h2>
               <p className="mt-4 text-white/70">
                 Founded by enthusiasts, for enthusiasts. We obsess over the
                 details so you can enjoy the drive. Every car is vetted,
@@ -466,7 +481,10 @@ function Step({
   onClick?: () => void;
 }) {
   return (
-    <button onClick={onClick} className="group w-full rounded-2xl border border-white/10 bg-white/5 p-5 text-left transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20">
+    <button
+      onClick={onClick}
+      className="group w-full rounded-2xl border border-white/10 bg-white/5 p-5 text-left transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+    >
       <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-md shadow-blue-500/20">
         <Icon className="h-5 w-5" />
       </div>
@@ -488,7 +506,10 @@ function ServiceCard({
   onClick?: () => void;
 }) {
   return (
-    <button onClick={onClick} className="w-full rounded-2xl border border-white/10 bg-white/5 p-6 text-left transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20">
+    <button
+      onClick={onClick}
+      className="w-full rounded-2xl border border-white/10 bg-white/5 p-6 text-left transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+    >
       <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/5">
         <Icon className="h-5 w-5 text-sky-400" />
       </div>

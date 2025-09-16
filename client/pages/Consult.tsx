@@ -13,13 +13,19 @@ export default function Consult() {
           >
             ← Back
           </button>
-          <a href="/" className="text-sm text-white/70 hover:text-white">Sidz Garage</a>
+          <a href="/" className="text-sm text-white/70 hover:text-white">
+            Sidz Garage
+          </a>
         </div>
       </header>
 
       <main className="container py-10">
-        <h1 className="text-3xl font-extrabold md:text-4xl">Consult our team</h1>
-        <p className="mt-2 text-white/70">Get expert guidance from our specialists.</p>
+        <h1 className="text-3xl font-extrabold md:text-4xl">
+          Consult our team
+        </h1>
+        <p className="mt-2 text-white/70">
+          Get expert guidance from our specialists.
+        </p>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
           <PersonCard
             name="Siddharth Nair"
@@ -57,13 +63,30 @@ function PersonCard({
   return (
     <article className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
       <div className="grid grid-cols-1 md:grid-cols-3">
-        <img src={photo} alt={name} className="h-56 w-full object-cover md:h-full md:col-span-1" />
+        <img
+          src={photo}
+          alt={name}
+          className="h-56 w-full object-cover md:h-full md:col-span-1"
+        />
         <div className="p-6 md:col-span-2">
           <h3 className="text-xl font-bold">{name}</h3>
           <p className="text-white/70">{title}</p>
           <div className="mt-4 space-y-1 text-sm">
-            <div>Email: <a href={`mailto:${email}`} className="text-sky-400 hover:underline">{email}</a></div>
-            <div>Phone: <a href={`tel:${phone}`} className="text-sky-400 hover:underline">{phone}</a></div>
+            <div>
+              Email:{" "}
+              <a
+                href={`mailto:${email}`}
+                className="text-sky-400 hover:underline"
+              >
+                {email}
+              </a>
+            </div>
+            <div>
+              Phone:{" "}
+              <a href={`tel:${phone}`} className="text-sky-400 hover:underline">
+                {phone}
+              </a>
+            </div>
           </div>
         </div>
       </div>

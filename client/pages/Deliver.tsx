@@ -28,18 +28,35 @@ export default function Deliver() {
           >
             ← Back
           </button>
-          <a href="/" className="text-sm text-white/70 hover:text-white">Sidz Garage</a>
+          <a href="/" className="text-sm text-white/70 hover:text-white">
+            Sidz Garage
+          </a>
         </div>
       </header>
 
       <main className="container relative z-10 py-12">
         <div className="rounded-2xl border border-white/10 bg-[hsl(var(--background))]/90 p-6 backdrop-blur">
           <h1 className="text-2xl font-bold">Schedule Delivery</h1>
-          <p className="mt-1 text-white/70">Share your details and we'll arrange a convenient delivery.</p>
+          <p className="mt-1 text-white/70">
+            Share your details and we'll arrange a convenient delivery.
+          </p>
           <form onSubmit={submit} className="mt-6 grid gap-4 md:grid-cols-3">
-            <Field label="Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} />
-            <Field label="Contact No" value={form.contact} onChange={(v) => setForm({ ...form, contact: v })} />
-            <Field label="Email" type="email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} />
+            <Field
+              label="Name"
+              value={form.name}
+              onChange={(v) => setForm({ ...form, name: v })}
+            />
+            <Field
+              label="Contact No"
+              value={form.contact}
+              onChange={(v) => setForm({ ...form, contact: v })}
+            />
+            <Field
+              label="Email"
+              type="email"
+              value={form.email}
+              onChange={(v) => setForm({ ...form, email: v })}
+            />
             <div className="md:col-span-3">
               <button className="rounded-lg bg-primary px-5 py-3 font-semibold text-primary-foreground shadow-md shadow-primary/30 transition hover:brightness-105">
                 Submit
@@ -52,7 +69,17 @@ export default function Deliver() {
   );
 }
 
-function Field({ label, value, onChange, type = "text" }: { label: string; value: string; onChange: (v: string) => void; type?: string }) {
+function Field({
+  label,
+  value,
+  onChange,
+  type = "text",
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  type?: string;
+}) {
   return (
     <label className="block text-sm">
       <span className="text-white/80">{label}</span>

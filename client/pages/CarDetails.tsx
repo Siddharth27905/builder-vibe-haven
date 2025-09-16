@@ -16,10 +16,13 @@ export default function CarDetails() {
 
   const brand = makes.find((m) => slugify(m.name) === makeParam);
 
-  const image = car?.image || brand?.image ||
+  const image =
+    car?.image ||
+    brand?.image ||
     "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=80";
 
-  const title = `${brand?.name ?? makeParam.toUpperCase()} ${car?.model ?? modelParam.replace(/-/g, " ")}`.trim();
+  const title =
+    `${brand?.name ?? makeParam.toUpperCase()} ${car?.model ?? modelParam.replace(/-/g, " ")}`.trim();
   const price = car?.price || "Contact for pricing";
 
   return (
@@ -32,10 +35,7 @@ export default function CarDetails() {
           >
             ← Back
           </button>
-          <a
-            href="/"
-            className="text-sm text-white/70 hover:text-white"
-          >
+          <a href="/" className="text-sm text-white/70 hover:text-white">
             Sidz Garage
           </a>
         </div>
@@ -52,10 +52,26 @@ export default function CarDetails() {
             <div className="mt-2 text-white/70">{brand?.description}</div>
 
             <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
-              <Spec icon={Zap} label="Power" value={car?.specs.horsepower || "—"} />
-              <Spec icon={Activity} label="0-60" value={car?.specs.acceleration || "—"} />
-              <Spec icon={Fuel} label="Engine" value={car?.specs.engine || "—"} />
-              <Spec icon={CarIcon} label="MPG" value={car?.specs.fuelEconomy || "—"} />
+              <Spec
+                icon={Zap}
+                label="Power"
+                value={car?.specs.horsepower || "—"}
+              />
+              <Spec
+                icon={Activity}
+                label="0-60"
+                value={car?.specs.acceleration || "—"}
+              />
+              <Spec
+                icon={Fuel}
+                label="Engine"
+                value={car?.specs.engine || "—"}
+              />
+              <Spec
+                icon={CarIcon}
+                label="MPG"
+                value={car?.specs.fuelEconomy || "—"}
+              />
             </div>
 
             <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-5">
@@ -79,7 +95,10 @@ export default function CarDetails() {
             <h2 className="text-xl font-semibold">Key Features</h2>
             <ul className="mt-4 flex flex-wrap gap-2">
               {car.features.map((f) => (
-                <li key={f} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
+                <li
+                  key={f}
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80"
+                >
                   {f}
                 </li>
               ))}

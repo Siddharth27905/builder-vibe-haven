@@ -12,10 +12,17 @@ export default function MakePage() {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <div className="container py-16">
-          <button onClick={() => navigate(-1)} className="rounded border border-white/10 bg-white/5 px-3 py-2 text-sm">← Back</button>
+          <button
+            onClick={() => navigate(-1)}
+            className="rounded border border-white/10 bg-white/5 px-3 py-2 text-sm"
+          >
+            ← Back
+          </button>
           <h1 className="mt-6 text-2xl font-bold">Make not found</h1>
           <p className="mt-2 text-white/60">We couldn't find this brand.</p>
-          <Link to="/" className="mt-4 inline-block text-sky-400">Go home</Link>
+          <Link to="/" className="mt-4 inline-block text-sky-400">
+            Go home
+          </Link>
         </div>
       </div>
     );
@@ -31,14 +38,20 @@ export default function MakePage() {
           >
             ← Back
           </button>
-          <a href="/" className="text-sm text-white/70 hover:text-white">Sidz Garage</a>
+          <a href="/" className="text-sm text-white/70 hover:text-white">
+            Sidz Garage
+          </a>
         </div>
       </header>
 
       <main className="container py-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-            <img src={make.image} alt={make.name} className="h-80 w-full object-cover" />
+            <img
+              src={make.image}
+              alt={make.name}
+              className="h-80 w-full object-cover"
+            />
           </div>
           <div>
             <h1 className="text-3xl font-extrabold md:text-4xl">{make.name}</h1>
