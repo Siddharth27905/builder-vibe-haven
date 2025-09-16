@@ -91,7 +91,7 @@ export default function Index() {
             </span>
           </a>
 
-          <nav className="hidden gap-2 md:flex">
+          <nav className="hidden items-center gap-2 md:flex">
             {sections.map((section) => (
               <button
                 key={section.id}
@@ -106,6 +106,39 @@ export default function Index() {
                 {section.name}
               </button>
             ))}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.currentTarget as HTMLFormElement;
+                const input = form.querySelector('input[name="q"]') as HTMLInputElement;
+                const q = input.value.trim();
+                if (!q) return;
+                const s = q.toLowerCase();
+                const makeMatch = makes.find((m) => m.name.toLowerCase() === s);
+                if (makeMatch) {
+                  return navigate(`/make/${encodeURIComponent(s.replace(/\s+/g, "-"))}`);
+                }
+                for (const m of makes) {
+                  const model = m.models.find((model) => model.toLowerCase() === s);
+                  if (model) {
+                    return navigate(`/car/${encodeURIComponent(m.name.toLowerCase().replace(/\s+/g, "-"))}/${encodeURIComponent(model.toLowerCase().replace(/\s+/g, "-"))}`);
+                  }
+                }
+                const fc = featuredCars.find((c) => `${c.make} ${c.model}`.toLowerCase() === s);
+                if (fc) {
+                  return navigate(`/car/${encodeURIComponent(fc.make.toLowerCase().replace(/\s+/g, "-"))}/${encodeURIComponent(fc.model.toLowerCase().replace(/\s+/g, "-"))}`);
+                }
+                navigate("/make/" + encodeURIComponent(s.replace(/\s+/g, "-")));
+              }}
+              className="ml-2"
+            >
+              <input
+                name="q"
+                type="search"
+                placeholder="Search make or model..."
+                className="w-56 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/90 placeholder:text-white/40 outline-none focus:border-white/20"
+              />
+            </form>
           </nav>
 
           <button
@@ -298,26 +331,24 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
-            <Step
-              icon={ShoppingCart}
-              title="Browse"
-              desc="Explore curated inventory with verified specs and history."
-            />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             <Step
               icon={Users}
               title="Consult"
               desc="Talk to an expert for trade-ins, financing, and options."
+              onClick={() => navigate('/consult')}
             />
             <Step
               icon={Calendar}
               title="Drive"
               desc="Book a test drive at your convenience."
+              onClick={() => navigate('/drive')}
             />
             <Step
               icon={Star}
               title="Deliver"
               desc="White-glove delivery straight to your door."
+              onClick={() => navigate('/deliver')}
             />
           </div>
         </div>
@@ -424,19 +455,21 @@ function Step({
   icon: Icon,
   title,
   desc,
+  onClick,
 }: {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   desc: string;
+  onClick?: () => void;
 }) {
   return (
-    <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10">
+    <button onClick={onClick} className="group w-full rounded-2xl border border-white/10 bg-white/5 p-5 text-left transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20">
       <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-md shadow-blue-500/20">
         <Icon className="h-5 w-5" />
       </div>
       <div className="font-semibold">{title}</div>
       <div className="mt-1 text-sm text-white/70">{desc}</div>
-    </div>
+    </button>
   );
 }
 
