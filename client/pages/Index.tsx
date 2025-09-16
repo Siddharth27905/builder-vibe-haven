@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Activity,
   Calendar,
@@ -12,31 +12,9 @@ import {
   Zap,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-interface CarSpecs {
-  engine: string;
-  horsepower: string;
-  acceleration: string;
-  fuelEconomy: string;
-}
-
-interface FeaturedCar {
-  id: number;
-  make: string;
-  model: string;
-  year: number;
-  price: string;
-  image: string;
-  specs: CarSpecs;
-  features: string[];
-}
-
-interface Make {
-  name: string;
-  description: string;
-  models: string[];
-  image: string;
-}
+import { featuredCars, makes, type FeaturedCar } from "@/data/catalog";
+import { slugify } from "@/lib/slug";
+import { useNavigate } from "react-router-dom";
 
 const sections = [
   { id: "home", name: "Home" },
@@ -52,81 +30,7 @@ type SectionId = (typeof sections)[number]["id"];
 export default function Index() {
   const [activeSection, setActiveSection] = useState<SectionId>("home");
   const sectionsRef = useRef<Record<string, HTMLElement | null>>({});
-
-  const featuredCars: FeaturedCar[] = useMemo(
-    () => [
-      {
-        id: 1,
-        make: "BMW",
-        model: "M4 Competition",
-        year: 2024,
-        price: "$84,900",
-        image:
-          "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1600&q=80",
-        specs: {
-          engine: "3.0L Twin-Turbo I6",
-          horsepower: "503 HP",
-          acceleration: "0-60 mph in 3.8s",
-          fuelEconomy: "16/23 mpg",
-        },
-        features: [
-          "Carbon Fiber Roof",
-          "Adaptive M Suspension",
-          "M Performance Exhaust",
-          "Harman Kardon Audio",
-        ],
-      },
-      {
-        id: 2,
-        make: "Mercedes-AMG",
-        model: "GT 63 S",
-        year: 2024,
-        price: "$159,900",
-        image:
-          "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?auto=format&fit=crop&w=1600&q=80",
-        specs: {
-          engine: "4.0L Twin-Turbo V8",
-          horsepower: "630 HP",
-          acceleration: "0-60 mph in 3.1s",
-          fuelEconomy: "15/21 mpg",
-        },
-        features: [
-          "AMG Performance 4MATIC+",
-          "Active Aero",
-          "Carbon Ceramic Brakes",
-          "Burmester Audio",
-        ],
-      },
-    ],
-    [],
-  );
-
-  const makes: Make[] = useMemo(
-    () => [
-      {
-        name: "BMW",
-        description: "Ultimate Driving Machine",
-        models: ["M3", "M4", "M5", "X5 M", "i8"],
-        image:
-          "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
-      },
-      {
-        name: "Mercedes-AMG",
-        description: "Performance Perfected",
-        models: ["GT 63 S", "C63 S", "E63 S", "GLE 63 S", "SL 63"],
-        image:
-          "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?auto=format&fit=crop&w=1200&q=80",
-      },
-      {
-        name: "Audi",
-        description: "Vorsprung durch Technik",
-        models: ["RS6", "RS7", "R8", "RSQ8", "e-tron GT"],
-        image:
-          "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=80",
-      },
-    ],
-    [],
-  );
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
@@ -161,6 +65,10 @@ export default function Index() {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  const goToMake = (name: string) => navigate(`/make/${slugify(name)}`);
+  const goToCar = (car: { make: string; model: string }) =>
+    navigate(`/car/${slugify(car.make)}/${slugify(car.model)}`);
 
   return (
     <div className="min-h-screen bg-[radial-gradient(1200px_600px_at_10%_-10%,rgba(59,130,246,0.15),transparent_60%),radial-gradient(1000px_500px_at_100%_0%,rgba(34,211,238,0.15),transparent_60%),hsl(var(--background))] text-foreground">
@@ -274,7 +182,8 @@ export default function Index() {
             {makes.map((make) => (
               <article
                 key={make.name}
-                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm transition hover:shadow-xl"
+                onClick={() => goToMake(make.name)}
+                className="group cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm transition hover:shadow-xl"
               >
                 <div className="relative">
                   <img
@@ -290,12 +199,16 @@ export default function Index() {
                   <p className="mt-1 text-sm text-white/60">{make.description}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {make.models.map((m) => (
-                      <span
+                      <button
                         key={m}
-                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          goToCar({ make: make.name, model: m });
+                        }}
+                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 hover:bg-white/10"
                       >
                         {m}
-                      </span>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -322,7 +235,7 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {featuredCars.map((car) => (
+            {featuredCars.map((car: FeaturedCar) => (
               <article
                 key={car.id}
                 className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm"
@@ -331,8 +244,9 @@ export default function Index() {
                   <img
                     src={car.image}
                     alt={`${car.make} ${car.model}`}
-                    className="h-64 w-full object-cover"
+                    className="h-64 w-full cursor-pointer object-cover"
                     loading="lazy"
+                    onClick={() => goToCar(car)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent" />
                   <div className="absolute bottom-4 left-4 rounded-md bg-black/60 px-3 py-1 text-sm">
@@ -364,10 +278,16 @@ export default function Index() {
                   </ul>
 
                   <div className="mt-6 flex gap-3">
-                    <button className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/30 transition hover:brightness-105">
+                    <button
+                      onClick={() => goToCar(car)}
+                      className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/30 transition hover:brightness-105"
+                    >
                       Book a Test Drive
                     </button>
-                    <button className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/10">
+                    <button
+                      onClick={() => goToCar(car)}
+                      className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/10"
+                    >
                       View Details
                     </button>
                   </div>
