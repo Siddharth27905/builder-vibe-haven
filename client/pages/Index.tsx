@@ -373,16 +373,19 @@ export default function Index() {
               icon={Zap}
               title="Performance Tuning"
               desc="ECU remaps, intake/exhaust, and track-ready setups."
+              onClick={() => navigate('/garage/performance')}
             />
             <ServiceCard
               icon={Wrench}
               title="Maintenance"
               desc="Manufacturer-spec service with OEM/approved parts."
+              onClick={() => navigate('/garage/maintenance')}
             />
             <ServiceCard
               icon={Activity}
               title="Detailing"
               desc="Paint correction, ceramic coating, and protection."
+              onClick={() => navigate('/garage/detailing')}
             />
           </div>
         </div>
@@ -477,19 +480,21 @@ function ServiceCard({
   icon: Icon,
   title,
   desc,
+  onClick,
 }: {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   desc: string;
+  onClick?: () => void;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+    <button onClick={onClick} className="w-full rounded-2xl border border-white/10 bg-white/5 p-6 text-left transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20">
       <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/5">
         <Icon className="h-5 w-5 text-sky-400" />
       </div>
       <div className="font-semibold">{title}</div>
       <div className="mt-1 text-sm text-white/70">{desc}</div>
-    </div>
+    </button>
   );
 }
 
