@@ -26,7 +26,7 @@ export default function Consult() {
             title="Senior Auto Dealer"
             email="s.nair@sidzgarage.com"
             phone="+1 (555) 012-3456"
-            photo="https://images.unsplash.com/photo-1541534401786-2077eed87a72?auto=format&fit=crop&w=800&q=80"
+            photo="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=800&q=80"
           />
           <PersonCard
             name="Mr. Aman"
