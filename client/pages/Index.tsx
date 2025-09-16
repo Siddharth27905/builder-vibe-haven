@@ -249,9 +249,6 @@ export default function Index() {
                     onClick={() => goToCar(car)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent" />
-                  <div className="absolute bottom-4 left-4 rounded-md bg-black/60 px-3 py-1 text-sm">
-                    {car.year} • {car.price}
-                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold">
@@ -259,31 +256,20 @@ export default function Index() {
                     <span className="text-white/80">{car.model}</span>
                   </h3>
 
-                  <div className="mt-4 grid grid-cols-2 gap-3 text-sm md:grid-cols-4">
-                    <Spec icon={Zap} label="Power" value={car.specs.horsepower} />
-                    <Spec icon={Activity} label="0-60" value={car.specs.acceleration} />
-                    <Spec icon={Fuel} label="Engine" value={car.specs.engine} />
-                    <Spec icon={CarIcon} label="MPG" value={car.specs.fuelEconomy} />
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {(makes.find((m) => m.name === car.make)?.models || []).map((m) => (
+                      <button
+                        key={m}
+                        onClick={() => goToCar({ make: car.make, model: m })}
+                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 hover:bg-white/10"
+                      >
+                        {m}
+                      </button>
+                    ))}
                   </div>
 
-                  <ul className="mt-5 flex flex-wrap gap-2">
-                    {car.features.map((f) => (
-                      <li
-                        key={f}
-                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80"
-                      >
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
 
-                  <div className="mt-6 flex gap-3">
-                    <button
-                      onClick={() => goToCar(car)}
-                      className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/30 transition hover:brightness-105"
-                    >
-                      Book a Test Drive
-                    </button>
+                  <div className="mt-6">
                     <button
                       onClick={() => goToCar(car)}
                       className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/10"
