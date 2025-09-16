@@ -10,6 +10,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import MakePage from "./pages/Make";
 import CarDetails from "./pages/CarDetails";
+import Consult from "./pages/Consult";
+import Drive from "./pages/Drive";
+import Deliver from "./pages/Deliver";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +26,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/make/:makeId" element={<MakePage />} />
           <Route path="/car/:make/:model" element={<CarDetails />} />
+          <Route path="/consult" element={<Consult />} />
+          <Route path="/drive" element={<Drive />} />
+          <Route path="/deliver" element={<Deliver />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
