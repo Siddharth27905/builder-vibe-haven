@@ -524,7 +524,7 @@ function Step({
   desc: string;
 }) {
   return (
-    <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/7.5">
+    <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10">
       <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-md shadow-blue-500/20">
         <Icon className="h-5 w-5" />
       </div>
