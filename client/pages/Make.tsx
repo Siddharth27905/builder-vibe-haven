@@ -15,7 +15,7 @@ export default function MakePage() {
       <div className="min-h-screen bg-background text-foreground">
         <div className="container py-16">
           <button
-            onClick={() => navigate(-1)}
+            onClick={goBack}
             className="rounded border border-white/10 bg-white/5 px-3 py-2 text-sm"
           >
             ← Back
