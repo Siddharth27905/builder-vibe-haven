@@ -83,7 +83,11 @@ export const featuredCars: FeaturedCar[] = [
       acceleration: "0-60 mph in 4.1s",
       fuelEconomy: "16/23 mpg",
     },
-    features: ["M Sport Differential", "Adaptive Suspension", "Live Cockpit Pro"],
+    features: [
+      "M Sport Differential",
+      "Adaptive Suspension",
+      "Live Cockpit Pro",
+    ],
   },
   {
     id: 4,
@@ -115,7 +119,11 @@ export const featuredCars: FeaturedCar[] = [
       acceleration: "0-60 mph in 3.7s",
       fuelEconomy: "13/18 mpg",
     },
-    features: ["M Multifunction Seats", "Sport Exhaust", "Parking Assistant Plus"],
+    features: [
+      "M Multifunction Seats",
+      "Sport Exhaust",
+      "Parking Assistant Plus",
+    ],
   },
   {
     id: 6,
@@ -196,7 +204,11 @@ export const featuredCars: FeaturedCar[] = [
       acceleration: "0-60 mph in 3.5s",
       fuelEconomy: "14/21 mpg",
     },
-    features: ["Active Roll Stabilization", "AMG Performance 4MATIC+", "Burmester"],
+    features: [
+      "Active Roll Stabilization",
+      "AMG Performance 4MATIC+",
+      "Burmester",
+    ],
   },
   // Audi
   {
@@ -261,7 +273,11 @@ export const featuredCars: FeaturedCar[] = [
       acceleration: "0-60 mph in 3.7s",
       fuelEconomy: "13/19 mpg",
     },
-    features: ["Active Roll Stabilization", "Quattro", "Dynamic All-Wheel Steering"],
+    features: [
+      "Active Roll Stabilization",
+      "Quattro",
+      "Dynamic All-Wheel Steering",
+    ],
   },
   {
     id: 15,

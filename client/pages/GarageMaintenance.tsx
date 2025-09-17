@@ -15,8 +15,15 @@ export default function GarageMaintenance() {
       <div className="absolute inset-0 bg-black/60" />
       <header className="relative z-10 border-b border-white/10 bg-black/40 backdrop-blur-xl">
         <div className="container flex items-center justify-between py-4">
-          <button onClick={goBack} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/80 hover:bg-white/10">← Back</button>
-          <a href="/" className="text-sm text-white/70 hover:text-white">Sidz Garage</a>
+          <button
+            onClick={goBack}
+            className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/80 hover:bg-white/10"
+          >
+            ← Back
+          </button>
+          <a href="/" className="text-sm text-white/70 hover:text-white">
+            Sidz Garage
+          </a>
         </div>
       </header>
 
@@ -25,7 +32,11 @@ export default function GarageMaintenance() {
           <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-2">
             <div>
               <h1 className="text-3xl font-extrabold">Precision Maintenance</h1>
-              <p className="mt-3 text-white/70">Factory-spec service using OEM or approved parts. Transparent checklists and digital reports ensure your car is always road and track ready.</p>
+              <p className="mt-3 text-white/70">
+                Factory-spec service using OEM or approved parts. Transparent
+                checklists and digital reports ensure your car is always road
+                and track ready.
+              </p>
               <ul className="mt-6 space-y-2 text-sm text-white/80">
                 <li>• Scheduled servicing and inspections</li>
                 <li>• Brake, suspension, and fluid services</li>
@@ -33,7 +44,11 @@ export default function GarageMaintenance() {
                 <li>• Pre-purchase inspections</li>
               </ul>
             </div>
-            <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80" alt="Tools and parts" className="h-64 w-full rounded-xl object-cover md:h-full" />
+            <img
+              src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80"
+              alt="Tools and parts"
+              className="h-64 w-full rounded-xl object-cover md:h-full"
+            />
           </div>
         </div>
       </main>
