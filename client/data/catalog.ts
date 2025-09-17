@@ -76,7 +76,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2024,
     price: "$74,300",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/6/63/BMW_G80_M3_IMG_3842.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://upload.wikimedia.org/wikipedia/commons/6/63/BMW_G80_M3_IMG_3842.jpg",
     specs: {
       engine: "3.0L Twin-Turbo I6",
       horsepower: "473 HP",
@@ -92,7 +93,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$109,900",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/1/1d/BMW_M5_Competition_Pack_%28F90%29.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://upload.wikimedia.org/wikipedia/commons/1/1d/BMW_M5_Competition_Pack_%28F90%29.jpg",
     specs: {
       engine: "4.4L Twin-Turbo V8",
       horsepower: "600 HP",
@@ -108,7 +110,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2024,
     price: "$122,300",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/6/68/2015_BMW_X5_M_%28F85%29_4.4_Front.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://upload.wikimedia.org/wikipedia/commons/6/68/2015_BMW_X5_M_%28F85%29_4.4_Front.jpg",
     specs: {
       engine: "4.4L Twin-Turbo V8",
       horsepower: "617 HP",
@@ -124,7 +127,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2020,
     price: "$147,500",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/0/0c/BMW_i8_IAA_2013_01.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://upload.wikimedia.org/wikipedia/commons/0/0c/BMW_i8_IAA_2013_01.jpg",
     specs: {
       engine: "1.5L Turbo I3 + eDrive",
       horsepower: "369 HP",
@@ -140,7 +144,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2021,
     price: "$78,250",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/3/3e/2018_Mercedes-AMG_C63_S_Premium_Plus_Automatic_4.0_Front.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://upload.wikimedia.org/wikipedia/commons/3/3e/2018_Mercedes-AMG_C63_S_Premium_Plus_Automatic_4.0_Front.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "503 HP",
@@ -156,7 +161,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2022,
     price: "$112,450",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/4/49/Mercedes-AMG_E_63_S_4MATIC%2B.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+     // "https://upload.wikimedia.org/wikipedia/commons/4/49/Mercedes-AMG_E_63_S_4MATIC%2B.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "603 HP",
@@ -172,7 +178,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$120,990",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/0/0a/Mercedes-AMG_GLE_63_S_4MATIC%2B_Coupe_IMG_4089.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://upload.wikimedia.org/wikipedia/commons/0/0a/Mercedes-AMG_GLE_63_S_4MATIC%2B_Coupe_IMG_4089.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8 + EQ Boost",
       horsepower: "603 HP",
@@ -188,7 +195,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$183,000",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/5/59/2022_Mercedes-AMG_SL_63_4MATIC%2B_Front.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+     // "https://upload.wikimedia.org/wikipedia/commons/5/59/2022_Mercedes-AMG_SL_63_4MATIC%2B_Front.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "577 HP",
@@ -208,7 +216,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$118,900",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/0/02/Audi_RS6_Avant_C8_IMG_2921.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://upload.wikimedia.org/wikipedia/commons/0/02/Audi_RS6_Avant_C8_IMG_2921.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "591 HP",
@@ -224,7 +233,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$122,995",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/0/03/Audi_RS7_Sportback_C8_IMG_2924.jpg",
+     "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://upload.wikimedia.org/wikipedia/commons/0/03/Audi_RS7_Sportback_C8_IMG_2924.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "591 HP",
@@ -240,7 +250,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2022,
     price: "$158,600",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/6/66/2019_Audi_R8_Performance_5.2_Front.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+    //  "https://upload.wikimedia.org/wikipedia/commons/6/66/2019_Audi_R8_Performance_5.2_Front.jpg",
     specs: {
       engine: "5.2L V10",
       horsepower: "602 HP",
@@ -256,7 +267,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$126,945",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/70/2020_Audi_RSQ8_TFSI_quattro_Automatic_4.0_Front.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+     // "https://upload.wikimedia.org/wikipedia/commons/7/70/2020_Audi_RSQ8_TFSI_quattro_Automatic_4.0_Front.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "591 HP",
@@ -276,7 +288,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$104,900",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/0/0a/Audi_e-tron_GT_quattro_IMG_2905.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+     // "https://upload.wikimedia.org/wikipedia/commons/0/0a/Audi_e-tron_GT_quattro_IMG_2905.jpg",
     specs: {
       engine: "Dual-Motor Electric",
       horsepower: "522 HP",
@@ -297,20 +310,23 @@ export const makes: Make[] = [
     description: "Ultimate Driving Machine",
     models: ["M3", "M4 Competition", "M5", "X5 M", "i8"],
     image:
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+    //  "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Mercedes-AMG",
     description: "Performance Perfected",
     models: ["GT 63 S", "C63 S", "E63 S", "GLE 63 S", "SL 63"],
     image:
-      "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?auto=format&fit=crop&w=1200&q=80",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://images.unsplash.com/photo-1563720360172-67b8f3dce741?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Audi",
     description: "Vorsprung durch Technik",
     models: ["RS6", "RS7", "R8", "RSQ8", "e-tron GT"],
     image:
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=80",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
+      //"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=80",
   },
 ];
