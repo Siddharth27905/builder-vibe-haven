@@ -7,6 +7,7 @@ import { slugify } from "@/lib/slug";
 export default function MakePage() {
   const { makeId } = useParams();
   const navigate = useNavigate();
+  const goBack = useSafeBack();
   const make = makes.find((m) => slugify(m.name) === makeId);
 
   if (!make) {
