@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSafeBack } from "@/hooks/use-safe-back";
 import { toast } from "sonner";
 
 export default function Deliver() {
   const navigate = useNavigate();
+  const goBack = useSafeBack();
   const [form, setForm] = useState({ name: "", contact: "", email: "" });
 
   const submit = (e: React.FormEvent) => {
@@ -23,7 +25,7 @@ export default function Deliver() {
       <header className="relative z-10 border-b border-white/10 bg-black/40 backdrop-blur-xl">
         <div className="container flex items-center justify-between py-4">
           <button
-            onClick={() => navigate(-1)}
+            onClick={goBack}
             className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/80 hover:bg-white/10"
           >
             ← Back

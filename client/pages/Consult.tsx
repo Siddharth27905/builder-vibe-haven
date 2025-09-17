@@ -1,14 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useSafeBack } from "@/hooks/use-safe-back";
 
 export default function Consult() {
   const navigate = useNavigate();
+  const goBack = useSafeBack();
   return (
     <div className="min-h-screen bg-[radial-gradient(1200px_600px_at_10%_-10%,rgba(59,130,246,0.15),transparent_60%),radial-gradient(1000px_500px_at_100%_0%,rgba(34,211,238,0.15),transparent_60%),hsl(var(--background))] text-foreground">
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/40 backdrop-blur-xl">
         <div className="container flex items-center justify-between py-4">
           <button
-            onClick={() => navigate(-1)}
+            onClick={goBack}
             className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/80 hover:bg-white/10"
           >
             ← Back

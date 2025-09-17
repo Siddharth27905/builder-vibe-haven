@@ -1,12 +1,13 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useSafeBack } from "@/hooks/use-safe-back";
 import { featuredCars, makes } from "@/data/catalog";
 import { slugify } from "@/lib/slug";
 import { Activity, Car as CarIcon, Fuel, Zap } from "lucide-react";
 
 export default function CarDetails() {
   const params = useParams();
-  const navigate = useNavigate();
+  const goBack = useSafeBack();
   const makeParam = params.make ?? "";
   const modelParam = params.model ?? "";
 
@@ -30,7 +31,7 @@ export default function CarDetails() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-black/40 backdrop-blur-xl">
         <div className="container flex items-center justify-between py-4">
           <button
-            onClick={() => navigate(-1)}
+            onClick={goBack}
             className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white/80 hover:bg-white/10"
           >
             ← Back
