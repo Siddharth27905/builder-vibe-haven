@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useSafeBack } from "@/hooks/use-safe-back";
 import { featuredCars, makes } from "@/data/catalog";
+import { modelImageMap } from "@/data/model-images";
 import { slugify } from "@/lib/slug";
 import { Activity, Car as CarIcon, Fuel, Zap } from "lucide-react";
 
@@ -11,14 +12,18 @@ export default function CarDetails() {
   const makeParam = params.make ?? "";
   const modelParam = params.model ?? "";
 
-  const car = featuredCars.find(
-    (c) => slugify(c.make) === makeParam && slugify(c.model) === modelParam,
-  );
+  const car = featuredCars.find((c) => {
+    if (slugify(c.make) !== makeParam) return false;
+    const m = slugify(c.model);
+    return m === modelParam || m.startsWith(modelParam) || modelParam.startsWith(m);
+  });
 
   const brand = makes.find((m) => slugify(m.name) === makeParam);
 
+  const modelKey = `${makeParam}/${modelParam}`;
   const image =
     car?.image ||
+    modelImageMap[modelKey] ||
     brand?.image ||
     "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=80";
 
