@@ -54,7 +54,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2024,
     price: "$159,900",
     image:
-      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg"
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg",
       //"https://upload.wikimedia.org/wikipedia/commons/2/2b/Mercedes-AMG_GT_63_S_4MATIC%2B.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
