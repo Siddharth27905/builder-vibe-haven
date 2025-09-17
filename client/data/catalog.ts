@@ -33,7 +33,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2024,
     price: "$84,900",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/9/90/BMW_G82_M4_IMG_3872.jpg",
+      "https: //upload.wikimedia.org/wikipedia/commons/9/90/BMW_G82_M4_IMG_3872.jpg",
     specs: {
       engine: "3.0L Twin-Turbo I6",
       horsepower: "503 HP",
@@ -54,7 +54,8 @@ export const featuredCars: FeaturedCar[] = [
     year: 2024,
     price: "$159,900",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/2/2b/Mercedes-AMG_GT_63_S_4MATIC%2B.jpg",
+      "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg#/media/File:Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg"
+      //"https://upload.wikimedia.org/wikipedia/commons/2/2b/Mercedes-AMG_GT_63_S_4MATIC%2B.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "630 HP",
