@@ -33,7 +33,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2024,
     price: "$84,900",
     image:
-      "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/9/90/BMW_G82_M4_IMG_3872.jpg",
     specs: {
       engine: "3.0L Twin-Turbo I6",
       horsepower: "503 HP",
@@ -54,7 +54,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2024,
     price: "$159,900",
     image:
-      "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/2/2b/Mercedes-AMG_GT_63_S_4MATIC%2B.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "630 HP",
@@ -68,7 +68,6 @@ export const featuredCars: FeaturedCar[] = [
       "Burmester Audio",
     ],
   },
-  // Additional BMW models
   {
     id: 3,
     make: "BMW",
@@ -76,18 +75,14 @@ export const featuredCars: FeaturedCar[] = [
     year: 2024,
     price: "$74,300",
     image:
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/6/63/BMW_G80_M3_IMG_3842.jpg",
     specs: {
       engine: "3.0L Twin-Turbo I6",
       horsepower: "473 HP",
       acceleration: "0-60 mph in 4.1s",
       fuelEconomy: "16/23 mpg",
     },
-    features: [
-      "M Sport Differential",
-      "Adaptive Suspension",
-      "Live Cockpit Pro",
-    ],
+    features: ["M Sport Differential", "Adaptive Suspension", "Live Cockpit Pro"],
   },
   {
     id: 4,
@@ -96,7 +91,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$109,900",
     image:
-      "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1d/BMW_M5_Competition_Pack_%28F90%29.jpg",
     specs: {
       engine: "4.4L Twin-Turbo V8",
       horsepower: "600 HP",
@@ -112,18 +107,14 @@ export const featuredCars: FeaturedCar[] = [
     year: 2024,
     price: "$122,300",
     image:
-      "https://images.unsplash.com/photo-1619767886558-efdc259cde1d?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/6/68/2015_BMW_X5_M_%28F85%29_4.4_Front.jpg",
     specs: {
       engine: "4.4L Twin-Turbo V8",
       horsepower: "617 HP",
       acceleration: "0-60 mph in 3.7s",
       fuelEconomy: "13/18 mpg",
     },
-    features: [
-      "M Multifunction Seats",
-      "Sport Exhaust",
-      "Parking Assistant Plus",
-    ],
+    features: ["M Multifunction Seats", "Sport Exhaust", "Parking Assistant Plus"],
   },
   {
     id: 6,
@@ -132,7 +123,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2020,
     price: "$147,500",
     image:
-      "https://images.unsplash.com/photo-1511390404551-1b9f3d6b7fcd?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0c/BMW_i8_IAA_2013_01.jpg",
     specs: {
       engine: "1.5L Turbo I3 + eDrive",
       horsepower: "369 HP",
@@ -141,7 +132,6 @@ export const featuredCars: FeaturedCar[] = [
     },
     features: ["Carbon Core", "Laser Headlights", "Head-Up Display"],
   },
-  // Mercedes-AMG
   {
     id: 7,
     make: "Mercedes-AMG",
@@ -149,7 +139,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2021,
     price: "$78,250",
     image:
-      "https://images.unsplash.com/photo-1619767886547-6e4b1cd5df85?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3e/2018_Mercedes-AMG_C63_S_Premium_Plus_Automatic_4.0_Front.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "503 HP",
@@ -165,7 +155,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2022,
     price: "$112,450",
     image:
-      "https://images.unsplash.com/photo-1600359755060-0c3c9d805e18?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/4/49/Mercedes-AMG_E_63_S_4MATIC%2B.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "603 HP",
@@ -181,7 +171,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$120,990",
     image:
-      "https://images.unsplash.com/photo-1606664516078-29841e0254dd?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0a/Mercedes-AMG_GLE_63_S_4MATIC%2B_Coupe_IMG_4089.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8 + EQ Boost",
       horsepower: "603 HP",
@@ -197,7 +187,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$183,000",
     image:
-      "https://images.unsplash.com/photo-1603386329225-868f9b1ee4f6?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/5/59/2022_Mercedes-AMG_SL_63_4MATIC%2B_Front.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "577 HP",
@@ -210,7 +200,6 @@ export const featuredCars: FeaturedCar[] = [
       "Burmester",
     ],
   },
-  // Audi
   {
     id: 11,
     make: "Audi",
@@ -218,7 +207,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$118,900",
     image:
-      "https://images.unsplash.com/photo-1598133894008-5b9b419a07b1?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/0/02/Audi_RS6_Avant_C8_IMG_2921.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "591 HP",
@@ -234,7 +223,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$122,995",
     image:
-      "https://images.unsplash.com/photo-1524169358666-79f22534bc6e?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/0/03/Audi_RS7_Sportback_C8_IMG_2924.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "591 HP",
@@ -250,7 +239,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2022,
     price: "$158,600",
     image:
-      "https://images.unsplash.com/photo-1558980664-10a5ac3313f8?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/6/66/2019_Audi_R8_Performance_5.2_Front.jpg",
     specs: {
       engine: "5.2L V10",
       horsepower: "602 HP",
@@ -266,7 +255,7 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$126,945",
     image:
-      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/7/70/2020_Audi_RSQ8_TFSI_quattro_Automatic_4.0_Front.jpg",
     specs: {
       engine: "4.0L Twin-Turbo V8",
       horsepower: "591 HP",
@@ -286,14 +275,18 @@ export const featuredCars: FeaturedCar[] = [
     year: 2023,
     price: "$104,900",
     image:
-      "https://images.unsplash.com/photo-1627856019514-3b3b9c1a40d2?auto=format&fit=crop&w=1600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/0/0a/Audi_e-tron_GT_quattro_IMG_2905.jpg",
     specs: {
       engine: "Dual-Motor Electric",
       horsepower: "522 HP",
       acceleration: "0-60 mph in 3.9s",
       fuelEconomy: "83 MPGe",
     },
-    features: ["Adaptive Air Suspension", "Matrix LED", "Virtual Cockpit"],
+    features: [
+      "Adaptive Air Suspension",
+      "Matrix LED",
+      "Virtual Cockpit",
+    ],
   },
 ];
 
@@ -301,7 +294,7 @@ export const makes: Make[] = [
   {
     name: "BMW",
     description: "Ultimate Driving Machine",
-    models: ["M3", "M4", "M5", "X5 M", "i8"],
+    models: ["M3", "M4 Competition", "M5", "X5 M", "i8"],
     image:
       "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80",
   },
