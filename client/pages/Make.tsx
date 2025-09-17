@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
+import { useSafeBack } from "@/hooks/use-safe-back";
 import { makes } from "@/data/catalog";
 import { slugify } from "@/lib/slug";
 
